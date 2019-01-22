@@ -13,4 +13,8 @@ public class Ctest{
 	public int getAdd(int a, int b){
 		return a+b;
 	}
+	
+	public int getA(){
+		return a;
+	}
 }
