@@ -23,9 +23,9 @@ public class insertTEST {
 	int point = 55;
 	String remark = "mummy";
 	
-	@Test
-	public void mainTest() {
-//		getInsertTest();
+	public static void main(String[] args) {
+		insertTEST testone = new insertTEST();
+		testone.getInsertTest();
 		
 		
 		
@@ -34,7 +34,7 @@ public class insertTEST {
 	/**
 	 * insert
 	 */
-	@Test
+//	@Test
 	public void getInsertTest() {
 		Customers customer = Customers.create().setCustomers(code, name, phone, point, remark);
 		CustomersDaoImpl cust = VoFactoryDao.getCustomers();
