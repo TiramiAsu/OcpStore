@@ -100,6 +100,28 @@ public class Customers extends APerson{
      */
     private Customers() {}
     
+    /**
+     * Normal Constructor of Customers.
+     */
+    public Customers(String code, String name, String phone, int point,
+    		String remark) {
+    	this.c_Code = code;
+    	this.c_Name = name;
+    	this.c_Phone = phone;
+    	this.c_Point = point;
+    	this.c_Remark = remark;
+    }
+    
+    /**
+     * Normal Constructor of Customers(No remark).
+     */
+    public Customers(String code, String name, String phone, int point) {
+    	this.c_Code = code;
+    	this.c_Name = name;
+    	this.c_Phone = phone;
+    	this.c_Point = point;
+    }
+    
     
     
 // Method
@@ -125,19 +147,19 @@ public class Customers extends APerson{
     public Customers setCustomers(
     		String c_Code, String c_Name, String c_Phone, int c_Point,
     		String c_Remark) {
-		if(super.isCode(c_Code)) {
+		if(isCode(c_Code)) {
 			this.c_Code = c_Code;
 		}
 		
-		if(super.isName(c_Name)) {
+		if(isName(c_Name)) {
 			this.c_Name = c_Name;
 		}
 		
-		if(super.isPhone(c_Phone)) {
+		if(isPhone(c_Phone)) {
 			this.c_Phone = c_Phone;
 		}
 		
-		if(super.isRemark(c_Remark)) {
+		if(isRemark(c_Remark)) {
 			this.c_Remark = c_Remark;
 		}
 		
@@ -159,15 +181,15 @@ public class Customers extends APerson{
      */
     public Customers setCustomers(
     		String c_Code, String c_Name, String c_Phone, int c_Point) {
-		if(super.isCode(c_Code)) {
+		if(isCode(c_Code)) {
 			this.c_Code = c_Code;
 		}
 		
-		if(super.isName(c_Name)) {
+		if(isName(c_Name)) {
 			this.c_Name = c_Name;
 		}
 		
-		if(super.isPhone(c_Phone)) {
+		if(isPhone(c_Phone)) {
 			this.c_Phone = c_Phone;
 		}
 		

@@ -97,11 +97,56 @@ public class Employees extends APerson{
     
  // Constructor
     /**
-     * Null Constructor of Customers.
+     * Null Constructor of Employees.
      */
     private Employees() {}
     
+    /**
+     * Normal Constructor of Employees.
+     */
+    public Employees(String code, String name, String phone, String position,
+    		String remark) {
+    	if(isCode(code)) {
+    		this.e_Code = code;
+    	}
+    	
+    	if(isName(name)){
+    		this.e_Name = name;
+    	}
+    	
+    	if(isPhone(phone)) {
+    		this.e_Phone = phone;
+    	}
+    	
+    	if(isPosition(position)) {
+    		this.e_Position = position;
+    	}
+    	
+    	this.e_Remark = remark;
+    }
     
+    /**
+     * Normal Constructor of Employees(No remark).
+     */
+    public Employees(String code, String name, String phone, String position) {
+    	if(isCode(code)) {
+    		this.e_Code = code;
+    	}
+    	
+    	if(isName(name)){
+    		this.e_Name = name;
+    	}
+    	
+    	if(isPhone(phone)) {
+    		this.e_Phone = phone;
+    	}
+    	
+    	if(isPosition(position)) {
+    		this.e_Position = position;
+    	}
+    	
+    	this.e_Remark = null;
+    }
     
  // Method
     /**
@@ -159,17 +204,17 @@ public class Employees extends APerson{
      * @return Employees Employee<br><br>
      */
     public Employees setEmployees(
-    		String c_Code, String c_Name, String c_Phone, String e_Position) {
-		if(super.isCode(c_Code)) {
-			this.e_Code = c_Code;
+    		String e_Code, String e_Name, String e_Phone, String e_Position) {
+		if(super.isCode(e_Code)) {
+			this.e_Code = e_Code;
 		}
 		
-		if(super.isName(c_Name)) {
-			this.e_Name = c_Name;
+		if(super.isName(e_Name)) {
+			this.e_Name = e_Name;
 		}
 		
-		if(super.isPhone(c_Phone)) {
-			this.e_Phone = c_Phone;
+		if(super.isPhone(e_Phone)) {
+			this.e_Phone = e_Phone;
 		}
 		
 		this.e_Remark = null;

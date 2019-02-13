@@ -19,6 +19,7 @@ public interface IOrderDetails {
 	 * 						MySQL type  : Limit
 	 * @param e_ID			int(12)		: not null, >0
 	 * @param c_ID			int(12)		: not null, >0
+	 * @param p_ID          int(12)     : not null, >0
 	 * @param od_Price		decimal(9,3): not null
 	 * @param od_Unit		nvarchar(5)	: not null
 	 * @param od_Quantity	int(12)		: not null

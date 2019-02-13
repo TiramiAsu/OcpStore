@@ -16,7 +16,7 @@ public class ProductCategory {
 	private String productCategoryCode;
 	private String productCategoryName;
 	private String productCategoryOther;
-	private String productCategoryEmplyee;	// 廠商，建議放外面
+	private String productCategoryEmplyee;	//	廠商，建議放外面
 	
 // constructor
 	public ProductCategory() {

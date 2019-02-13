@@ -44,15 +44,17 @@ import java.io.IOException;
 
  * <b>4. {@link vo.orders.Orders Orders}</b>
  *  o_ID int(12) not null primary key auto_increment,
- *  e_ID int(12) not null,
- *  c_ID int(12) not null,
+ *  o_Code char(20) not null,
+ *  e_Code char(20) not null,
+ *  c_Code char(20) not null,
  *  o_Date date not null,
  *  o_Time time not null,
  *  o_Remark text(255)
 
  * <b>5. {@link vo.orders.OrderDetailsEnum OrderDetails}</b>	# 未設 Primary Key
  *  e_ID int(12) not null,
- *  c_ID int(12) not null,
+ *  c_Code char(20) not null,
+ *  p_Code char(20) not null,
  *  od_Price decimal(9,3) not null,
  *  od_Unit nvarchar(5) not null,
  *  od_Quantity int(12) not null,
