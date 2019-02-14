@@ -15,8 +15,7 @@ import java.util.List;
  * @version Java 1.8
  * @version MySQL WorkBench 8.0.13<br><br>
 */
-public interface MainDao<T> {
-	public void add(T t);
+public interface SelectDao<T> {
 	
 	public T findByCode(String code);
 	

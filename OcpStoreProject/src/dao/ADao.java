@@ -16,7 +16,7 @@ public abstract class ADao<T> implements IDaoModel{
 
 	/**
 	 * 
-	 * @param customer
+	 * @param T
 	 * @return 
 	 */
 	public abstract void insert(T t);
