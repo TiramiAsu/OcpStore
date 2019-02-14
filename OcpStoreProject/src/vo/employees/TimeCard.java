@@ -16,11 +16,7 @@ import java.time.*;
 public class TimeCard extends Employees{
 	LocalDate date = LocalDate.now();
 	LocalTime time = LocalTime.now();
-	
-	public void mainSSSS() {}
-	
-	
-	
+		
 	public TimeCard(String code, String employeeName, String phone, String type, String note) {
 		super(code, employeeName, phone, type, note);
 		setDate(date);
