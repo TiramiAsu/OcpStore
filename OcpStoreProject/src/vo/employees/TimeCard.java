@@ -17,7 +17,7 @@ public class TimeCard extends Employees{
 	LocalDate date = LocalDate.now();
 	LocalTime time = LocalTime.now();
 	
-	
+	public void mainSSSS() {}
 	
 	
 	
