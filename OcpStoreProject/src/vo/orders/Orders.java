@@ -3,14 +3,12 @@
  */
 package vo.orders;
 
-import java.io.IOException;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import ocpstoreException.PositiveIntegerException;
 import vo.IValueObject;
-import vo.employees.Employees;
 
 /**
  * Project: OcpStoreProject.vo.orders<br>
@@ -19,45 +17,46 @@ import vo.employees.Employees;
  * {@link Orders}
  * 
  * <p><b>About Class:</b><br>
- * &emsp;Increase about Orders other attributes. And the new 
- * attribute(mark * ) must Check too.
+ * &emsp;Increase about Orders attributes. And must Check too.
  * 
  * <p><b>About Attribute(private):</b>
  * <pre>
- *  1.    String Code;
- *  2.    String Name;
- *  3.    String Phone;
- * <b>*</b>4.    String Position;
- *  5.    String Remark;
- * <b>*</b>6. Employees employee = new Employees(); (static)
+ *  1.           int o_Code;
+ *  2.           int e_Code;
+ *  3.           int c_Code;
+ *  4.     LocalDate o_Date;
+ *  5. LocalDateTime o_Time;
+ *  6.        String o_Reamrk;
  * </pre>
  * 
- * <p><b>About Constructor(private):</b><br>
- * &emsp;Using {@link vo.IInnerStaticConstructor Inner Static Constructor Method}&nbsp;
- * to design the Constructor.<br>
+ * <p><b>About Constructor(public):</b><br>
  * <pre>
- *  1. Employees();
+ *  1. Orders(int o_code, int e_code, int c_code,
+ *            LocalDate date, LocalDateTime time, String remark);
+ *  1. Orders(int o_code, int e_code, int c_code,
+ *            LocalDate date, LocalDateTime time);
  * </pre>
  * 
  * <p><b>About Method(public):</b>
  * <pre>
- *  1. Employees create(); (static)
- *  2. Employees setEmployees(String c_Code, String c_Name, String c_Phone, int c_Point, String c_Remark);
- *  3. Employees setEmployees(String c_Code, String c_Name, String c_Phone, int c_Point);
- *  4.   boolean isPosition(String e_Position);
- *  5. Employees setInitialize(); (@Override)
- *  6.    String toString(); (@Override)
- *  7-16. set and get methods (exclude attribute of <i>employee</i>)
+ *  1. boolean isOcode(int o_code);
+ *  2. boolean isEcode(int e_code);
+ *  3. boolean isCcode(int c_code);
+ *  4. boolean isDate(LocalDate date);
+ *  5. boolean isTime(LocalDateTime time);
+ *  6.  String isRemark(String remark); (@Override)
+ *  7.  Orders setInitialize(); (@Override)
+ *  8.  String toString(); (@Override)
+ *  9-20. set and get methods (exclude attribute of <i>Orders</i>)
  * </pre>
  * 
- * @see (Interface)&nbsp;{@link vo.IInnerStaticConstructor IInnerStaticConstructor}
  * @see (Interface)&nbsp;{@link vo.IValueObject IValueObject}
  * @see (Interface)&nbsp;{@link vo.JavaOcpStoreProject JavaOcpStoreProject}<br><br>
  * @author TiramiAsu (tiramisu0116@gmail.com)<br><br>
  * @version Java 1.8
  * @version MySQL WorkBench 8.0.13<br><br>
  */
-public class Orders implements IValueObject{
+public class Orders implements IValueObject<Orders>{
 
 // Attribute
 	private int o_Code;
@@ -65,7 +64,7 @@ public class Orders implements IValueObject{
 	private int c_Code;
 	private LocalDate o_Date;
 	private LocalDateTime o_Time;
-	private String o_remark;
+	private String o_Remark;
 	
 // Constructor
 	/**
@@ -94,7 +93,7 @@ public class Orders implements IValueObject{
 			this.o_Time = time;
 		}
 		
-		this.o_remark = remark;
+		this.o_Remark = remark;
 	}
 	
 	/**
@@ -123,7 +122,7 @@ public class Orders implements IValueObject{
 			this.o_Time = time;
 		}
 		
-		this.o_remark = null;
+		this.o_Remark = null;
 	}
 	
 // Method
@@ -251,7 +250,7 @@ public class Orders implements IValueObject{
 	 * @return b (default: false)
 	 */
 	@Override
-	public boolean isRemark(String remark) throws IOException {
+	public boolean isRemark(String remark) {
 		boolean b = false;
 		
 		/* can be null, doesn't check.
@@ -263,6 +262,90 @@ public class Orders implements IValueObject{
 		}
 		return b;
 	}
+	
+	/**
+	 * Initialize Employees Class attributes.
+	 * 
+	 * @return this (return this Employees Class)
+	 */
+	@Override
+	public Orders setInitialize() {
+		this.o_Code = 0;
+		this.e_Code = 0;
+		this.c_Code = 0;
+		this.o_Date = null;
+		this.o_Time = null;
+		this.o_Remark = null;
+		return this;
+	}
+
+	/**
+	 * Show the Orders Class information.
+	 */
+	@Override
+	public String toString() {
+		return String.format("Orders\n"
+				+ "[o_Code      = %s, \n"
+				+ " e_Code      = %s, \n"
+				+ " c_Code      = %s, \n"
+				+ " o_Date      = %s, \n"
+				+ " o_Time      = %s, \n"
+				+ " o_Remark    = %s]",
+				o_Code, e_Code, c_Code,
+				o_Date.toString(), o_Time.toString(),
+				o_Remark);
+	}
+
+// Set and Get of Method
+	public int getO_Code() {
+		return o_Code;
+	}
+
+	public void setO_Code(int o_Code) {
+		this.o_Code = o_Code;
+	}
+
+	public int getE_Code() {
+		return e_Code;
+	}
+
+	public void setE_Code(int e_Code) {
+		this.e_Code = e_Code;
+	}
+
+	public int getC_Code() {
+		return c_Code;
+	}
+
+	public void setC_Code(int c_Code) {
+		this.c_Code = c_Code;
+	}
+
+	public LocalDate getO_Date() {
+		return o_Date;
+	}
+
+	public void setO_Date(LocalDate o_Date) {
+		this.o_Date = o_Date;
+	}
+
+	public LocalDateTime getO_Time() {
+		return o_Time;
+	}
+
+	public void setO_Time(LocalDateTime o_Time) {
+		this.o_Time = o_Time;
+	}
+
+	public String getO_remark() {
+		return o_Remark;
+	}
+
+	public void setO_remark(String o_remark) {
+		this.o_Remark = o_remark;
+	}
+	
+	
 	
 
 

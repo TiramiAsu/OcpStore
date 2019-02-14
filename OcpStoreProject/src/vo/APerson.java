@@ -34,7 +34,7 @@ import ocpstoreException.NullException;
  * @version Java 1.8
  * @version MySQL WorkBench 8.0.13<br><br>
  */
-public abstract class APerson implements IValueObject{
+public abstract class APerson implements IValueObject<APerson>{
 	
 	/**
 	 * <b>Check Code:</b><br>
@@ -126,20 +126,6 @@ public abstract class APerson implements IValueObject{
 		return b;
 	}
 	
-	/**
-	 * Using object initialize. Any subclass should Override it.
-	 * 
-	 * @return APerson person (or any inherit from APerson Class of subclass)
-	 */
-	public abstract APerson setInitialize();
-
-	/**
-	 * Should override about toString(), because the attribute are not same
-	 * at every subclasses.
-	 * 
-	 * @return String
-	 */
-	public abstract String toString();
 }
 
 

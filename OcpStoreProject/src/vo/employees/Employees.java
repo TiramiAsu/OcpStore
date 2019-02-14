@@ -20,11 +20,11 @@ import vo.APerson;
  * 
  * <p><b>About Attribute(private):</b>
  * <pre>
- *  1.    String Code;
- *  2.    String Name;
- *  3.    String Phone;
- * <b>*</b>4.    String Position;
- *  5.    String Remark;
+ *  1.    String e_Code;
+ *  2.    String e_Name;
+ *  3.    String e_Phone;
+ * <b>*</b>4.    String e_Position;
+ *  5.    String e_Remark;
  * <b>*</b>6. Employees employee = new Employees(); (static)
  * </pre>
  * 

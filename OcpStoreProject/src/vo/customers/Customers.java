@@ -105,21 +105,48 @@ public class Customers extends APerson{
      */
     public Customers(String code, String name, String phone, int point,
     		String remark) {
-    	this.c_Code = code;
-    	this.c_Name = name;
-    	this.c_Phone = phone;
-    	this.c_Point = point;
-    	this.c_Remark = remark;
+    	if(isCode(code)) {
+    		this.c_Code = code;
+    	}
+    	
+    	if(isName(name)) {
+    		this.c_Name = name;
+    	}
+    	
+    	if(isPhone(phone)) {
+    		this.c_Phone = phone;
+    	}
+    	
+    	if(isPoint(point)) {
+    		this.c_Point = point;
+    	}
+    	
+    	if(isRemark(remark)) {
+    		this.c_Remark = remark;
+    	}
     }
     
     /**
      * Normal Constructor of Customers(No remark).
      */
     public Customers(String code, String name, String phone, int point) {
-    	this.c_Code = code;
-    	this.c_Name = name;
-    	this.c_Phone = phone;
-    	this.c_Point = point;
+    	if(isCode(code)) {
+    		this.c_Code = code;
+    	}
+    	
+    	if(isName(name)) {
+    		this.c_Name = name;
+    	}
+    	
+    	if(isPhone(phone)) {
+    		this.c_Phone = phone;
+    	}
+    	
+    	if(isPoint(point)) {
+    		this.c_Point = point;
+    	}
+    	
+    	this.c_Remark = null;
     }
     
     

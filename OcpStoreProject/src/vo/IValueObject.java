@@ -73,7 +73,7 @@ import java.io.IOException;
  * @version Java 1.8
  * @version MySQL WorkBench 8.0.13<br><br>
  */
-public interface IValueObject extends JavaOcpStoreProject{
+public interface IValueObject<T> extends JavaOcpStoreProject{
 	
 	/**
 	 * @param remark	<br>text(255)
@@ -81,7 +81,22 @@ public interface IValueObject extends JavaOcpStoreProject{
 	 * @return boolean (Check remark follow the standard)
 	 * @throws IOException
 	 */
-	boolean isRemark(String remark) throws IOException;
+	boolean isRemark(String remark);
+	
+	/**
+	 * Using object initialize. Any subclass should Override it.
+	 * 
+	 * @return T
+	 */
+	public abstract T setInitialize();
+
+	/**
+	 * Should override about toString(), because the attribute are not same
+	 * at every subclasses.
+	 * 
+	 * @return String
+	 */
+	public abstract String toString();
 	
 }
 
