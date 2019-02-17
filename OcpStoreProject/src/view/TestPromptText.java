@@ -21,7 +21,7 @@ import java.awt.Color;
 
 /**
  * Project: OcpStoreProject.view<br>
- * Time: 2019年2月16日, 上午12:01:43<br><br>
+ * Time: 2019.2.16, AM 12:01:43<br><br>
  * @author TiramiAsu (tiramisu0116@gmail.com)<br><br>
  * @version Java 1.8
  * @version MySQL WorkBench 8.0.13<br><br>

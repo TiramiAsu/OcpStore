@@ -18,7 +18,7 @@ public class EmployeesLoginPanel extends LoginPanel {
 	public EmployeesLoginPanel() {
 		
 		// System message
-		lblUserName.setText("Employees  ");
+		lblSystemMessage.setText("Employees  ");
 		
 		// Inserted the Listener for txtAccount
 		txtAccount.addMouseListener(new PromptTextField("Employee Code", txtAccount));

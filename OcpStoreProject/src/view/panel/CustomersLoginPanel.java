@@ -18,7 +18,7 @@ public class CustomersLoginPanel extends LoginPanel {
 	public CustomersLoginPanel() {
 		
 		// System message
-		lblUserName.setText("Welcome!!  ");
+		lblSystemMessage.setText("Welcome!!  ");
 		
 		// Inserted the Listener for txtAccount
 		txtAccount.addMouseListener(new PromptTextField("Account", txtAccount));

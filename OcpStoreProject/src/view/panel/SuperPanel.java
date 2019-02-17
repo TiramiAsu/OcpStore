@@ -18,7 +18,7 @@ import javax.swing.SwingConstants;
  */
 public class SuperPanel extends JPanel {
 	public JLabel lblVersion;
-	public JLabel lblUserName;
+	public JLabel lblSystemMessage;
 
 	/**
 	 * Create the panel.
@@ -26,11 +26,11 @@ public class SuperPanel extends JPanel {
 	public SuperPanel() {
 		setLayout(null);
 		
-		lblUserName = new JLabel("UserName  ");
-		lblUserName.setBounds(633, 10, 127, 28);
-		lblUserName.setFont(getOcpStyleSystem());
-		lblUserName.setHorizontalAlignment(SwingConstants.RIGHT);
-		add(lblUserName);
+		lblSystemMessage = new JLabel("System Status  ");
+		lblSystemMessage.setBounds(633, 10, 127, 28);
+		lblSystemMessage.setFont(getOcpStyleSystem());
+		lblSystemMessage.setHorizontalAlignment(SwingConstants.RIGHT);
+		add(lblSystemMessage);
 		
 		lblVersion = new JLabel("Version 1.1");
 		lblVersion.setBounds(10, 362, 127, 28);
