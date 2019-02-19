@@ -3,14 +3,9 @@
  */
 package view.panel;
 
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
-import javax.swing.JScrollBar;
 import javax.swing.JLabel;
 import javax.swing.JButton;
-import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -41,12 +36,12 @@ public class ManagePanel extends SuperPanel {
 		
 		JLabel lbManagelName = new JLabel("Name");
 		lbManagelName.setBounds(40, 48, 170, 50);
-		lbManagelName.setFont(getOcpStyle(20));
+		lbManagelName.setFont(F.fTitleP20());
 		add(lbManagelName);
 		
 		JLabel lblManageCode = new JLabel("Code");
 		lblManageCode.setBounds(40, 101, 170, 28);
-		lblManageCode.setFont(getOcpStyle());
+		lblManageCode.setFont(F.fDefaultP16());
 		add(lblManageCode);
 		
 		btn1 = new JButton("Emploees");
@@ -57,7 +52,7 @@ public class ManagePanel extends SuperPanel {
 			}
 		});
 		btn1.setBounds(33, 140, 169, 35);
-		btn1.setFont(getOcpStyle("bold",20));
+		btn1.setFont(F.setIt("bOLd",20));
 		btn1.setHorizontalAlignment(SwingConstants.LEFT);
 		add(btn1);
 		
@@ -69,31 +64,31 @@ public class ManagePanel extends SuperPanel {
 			}
 		});
 		btn2.setBounds(33, 174, 169, 35);
-		btn2.setFont(getOcpStyle(12));
+		btn2.setFont(F.fTextP12());
 		btn2.setHorizontalAlignment(SwingConstants.LEFT);
 		add(btn2);
 		
 		btn3 = new JButton("xxx");
 		btn3.setHorizontalAlignment(SwingConstants.LEFT);
-		btn3.setFont(new Font("微軟正黑體", Font.PLAIN, 12));
+		btn3.setFont(F.fTextP12());
 		btn3.setBounds(33, 208, 169, 35);
 		add(btn3);
 		
 		btn4 = new JButton("xxx");
 		btn4.setHorizontalAlignment(SwingConstants.LEFT);
-		btn4.setFont(new Font("微軟正黑體", Font.PLAIN, 12));
+		btn4.setFont(F.fTextP12());
 		btn4.setBounds(33, 242, 169, 35);
 		add(btn4);
 		
 		btn5 = new JButton("xxx");
 		btn5.setHorizontalAlignment(SwingConstants.LEFT);
-		btn5.setFont(new Font("微軟正黑體", Font.PLAIN, 12));
+		btn5.setFont(F.fTextP12());
 		btn5.setBounds(33, 276, 169, 35);
 		add(btn5);
 		
 		btn6 = new JButton("xxx");
 		btn6.setHorizontalAlignment(SwingConstants.LEFT);
-		btn6.setFont(new Font("微軟正黑體", Font.PLAIN, 12));
+		btn6.setFont(F.fTextP12());
 		btn6.setBounds(33, 310, 169, 35);
 		add(btn6);
 		

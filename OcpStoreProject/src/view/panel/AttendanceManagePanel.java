@@ -23,6 +23,7 @@ public class AttendanceManagePanel extends JPanel {
 	private JLabel lblSecond;
 	private JScrollPane scrollPaneMain;
 	private JScrollPane scrollPaneSecond;
+	public static OcpFontStyle F = new OcpFontStyle();
 
 	/**
 	 * Create the panel.
@@ -31,12 +32,12 @@ public class AttendanceManagePanel extends JPanel {
 		setLayout(null);
 		
 		lblMain = new JLabel("All Information");
-		lblMain.setFont(new Font("微軟正黑體", Font.PLAIN, 10));
+		lblMain.setFont(F.fTextP10());
 		lblMain.setBounds(10, 5, 254, 15);
 		add(lblMain);
 		
 		lblSecond = new JLabel("Info");
-		lblSecond.setFont(new Font("微軟正黑體", Font.PLAIN, 10));
+		lblSecond.setFont(F.fTextP10());
 		lblSecond.setBounds(287, 5, 223, 15);
 		add(lblSecond);
 		
@@ -54,7 +55,7 @@ public class AttendanceManagePanel extends JPanel {
 		
 		JTextArea textAreaSecond = new JTextArea();
 		textAreaSecond.setText("EA006-Peter\r\nEA011-Sam\r\nEB008-Mary\r\nEB009-Kitty\r\nEC013-Bob\r\nED001-Cano\r\nEF022-Sandy\r\nEE085-Mummy\r\nEE088-Max\r\nEG030-Eric\r\nEG041-Tirami\r\nEJ029-Peggy\r\nEJ033-Lisa\r\nEK040-Sonic\r\nEL022-John\r\nEL031-Jimmy\r\nEM066-Frank\r\nEO077-Robin\r\nES015-Victor\r\nEX085-Puppy");
-		textAreaSecond.setFont(new Font("微軟正黑體", Font.PLAIN, 14));
+		textAreaSecond.setFont(F.fTextP14());
 		
 		scrollPaneSecond = new JScrollPane(textAreaSecond);
 		scrollPaneSecond.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);

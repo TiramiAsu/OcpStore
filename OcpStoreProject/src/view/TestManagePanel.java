@@ -2,7 +2,6 @@
  * KKSU.Studio &copy;
  */
 package view;
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -21,7 +20,9 @@ import view.panel.ManagePanel;
 public class TestManagePanel extends JFrame {
 
 	private JPanel contentPane;
+	private ManagePanel panel;
 
+	
 
 	/**
 	 * Launch the application.
@@ -50,7 +51,7 @@ public class TestManagePanel extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		ManagePanel panel = new ManagePanel();
+		panel = new ManagePanel();
 		panel.setBounds(26, 44, 795, 408);
 		contentPane.add(panel);
 	}

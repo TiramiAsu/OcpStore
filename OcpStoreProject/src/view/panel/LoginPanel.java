@@ -32,7 +32,7 @@ public class LoginPanel extends SuperPanel {
 		txtAccount = new JTextField();
 		txtAccount.setBounds(458, 112, 220, 46);
 		txtAccount.setColumns(10);
-		txtAccount.setFont(getOcpStyle());
+		txtAccount.setFont(F.fDefaultP16());
 		txtAccount.setForeground(Color.LIGHT_GRAY);
 		txtAccount.setText("Account");
 		add(txtAccount);
@@ -40,13 +40,13 @@ public class LoginPanel extends SuperPanel {
 		txtPassword = new JTextField();
 		txtPassword.setBounds(458, 168, 220, 46);
 		txtPassword.setColumns(10);
-		txtPassword.setFont(getOcpStyle());
+		txtPassword.setFont(F.fDefaultP16());
 		txtPassword.setForeground(Color.LIGHT_GRAY);
 		txtPassword.setText("Password");
 		add(txtPassword);
 		
 		btnLogin = new JButton("Login");
-		btnLogin.setFont(getOcpStyle("bold"));
+		btnLogin.setFont(F.setIt("bold"));
 		btnLogin.setBounds(458, 256, 220, 46);
 		add(btnLogin);
 		
