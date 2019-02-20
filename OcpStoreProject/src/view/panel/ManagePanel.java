@@ -4,7 +4,11 @@
 package view.panel;
 
 import javax.swing.SwingConstants;
+
+import ocptool.ISetEnture;
+
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -16,7 +20,7 @@ import java.awt.event.ActionEvent;
  * @version Java 1.8
  * @version MySQL WorkBench 8.0.13<br><br>
  */
-public class ManagePanel extends SuperPanel {
+public class ManagePanel extends SuperPanel implements ISetEnture{
 	private JButton btn1;
 	private JButton btn2;
 	private JButton btn3;
@@ -47,20 +51,20 @@ public class ManagePanel extends SuperPanel {
 		btn1 = new JButton("Emploees");
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				panel1.setVisible(true);
-				panel2.setVisible(false);
+				getSelectButton(btn1);
+				getVisiablePanel(panel1);
 			}
 		});
 		btn1.setBounds(33, 140, 169, 35);
-		btn1.setFont(F.setIt("bOLd",20));
+		btn1.setFont(F.fTextP12());
 		btn1.setHorizontalAlignment(SwingConstants.LEFT);
 		add(btn1);
 		
 		btn2 = new JButton("Attendance");
 		btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				panel2.setVisible(true);
-				panel1.setVisible(false);
+				getSelectButton(btn2);
+				getVisiablePanel(panel2);
 			}
 		});
 		btn2.setBounds(33, 174, 169, 35);
@@ -68,25 +72,45 @@ public class ManagePanel extends SuperPanel {
 		btn2.setHorizontalAlignment(SwingConstants.LEFT);
 		add(btn2);
 		
-		btn3 = new JButton("xxx");
+		btn3 = new JButton("btn3");
+		btn3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				getSelectButton(btn3);
+			}
+		});
 		btn3.setHorizontalAlignment(SwingConstants.LEFT);
 		btn3.setFont(F.fTextP12());
 		btn3.setBounds(33, 208, 169, 35);
 		add(btn3);
 		
-		btn4 = new JButton("xxx");
+		btn4 = new JButton("btn4");
+		btn4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				getSelectButton(btn4);
+			}
+		});
 		btn4.setHorizontalAlignment(SwingConstants.LEFT);
 		btn4.setFont(F.fTextP12());
 		btn4.setBounds(33, 242, 169, 35);
 		add(btn4);
 		
-		btn5 = new JButton("xxx");
+		btn5 = new JButton("btn5");
+		btn5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				getSelectButton(btn5);
+			}
+		});
 		btn5.setHorizontalAlignment(SwingConstants.LEFT);
 		btn5.setFont(F.fTextP12());
 		btn5.setBounds(33, 276, 169, 35);
 		add(btn5);
 		
-		btn6 = new JButton("xxx");
+		btn6 = new JButton("btn6");
+		btn6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				getSelectButton(btn6);
+			}
+		});
 		btn6.setHorizontalAlignment(SwingConstants.LEFT);
 		btn6.setFont(F.fTextP12());
 		btn6.setBounds(33, 310, 169, 35);
@@ -100,6 +124,53 @@ public class ManagePanel extends SuperPanel {
 		panel2.setBounds(225, 45, 520, 340);
 		add(panel2);
 		panel2.setVisible(false);
+		
+	}
+
+
+	@Override
+	public void getVisiablePanel(JPanel panel) {
+		
+		boolean boolpanel1 = false;
+		boolean boolpanel2 = false;
+		
+		if(panel instanceof EmployeesManagePanel) {
+			boolpanel1 = true;
+		}else if(panel instanceof AttendanceManagePanel) {
+			boolpanel2 = true;
+		}
+		
+		panel1.setVisible(boolpanel1);
+		panel2.setVisible(boolpanel2);
+	}
+
+
+	@Override
+	public void getSelectButton(JButton btn) {
+		// all set original Font
+		btn1.setFont(F.fTextP12());
+		btn2.setFont(F.fTextP12());
+		btn3.setFont(F.fTextP12());
+		btn4.setFont(F.fTextP12());
+		btn5.setFont(F.fTextP12());
+		btn6.setFont(F.fTextP12());
+		
+		// using Text identify
+		String[] box = {
+				btn1.getText(),
+				btn2.getText(),
+				btn3.getText(),
+				btn4.getText(),
+				btn5.getText(),
+				btn6.getText()
+		};
+		
+		// set it
+		for(String s:box) {
+			if(btn.getText().equals(s)) {
+				btn.setFont(F.setIt("bold",16));
+			}
+		}
 		
 	}
 }

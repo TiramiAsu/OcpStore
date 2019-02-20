@@ -7,6 +7,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
+import ocptool.OcpFontStyle;
+
+import java.awt.Color;
+
 /**
  * Project: OcpStoreProject.view.panel<br>
  * Time: 2019.2.15, PM 9:23:46<br><br>
@@ -23,6 +27,7 @@ public class SuperPanel extends JPanel {
 	 * Create the panel.
 	 */
 	public SuperPanel() {
+		setBackground(Color.WHITE);
 		setLayout(null);
 		
 		lblSystemMessage = new JLabel("System Status  ");

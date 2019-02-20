@@ -1,7 +1,7 @@
 /*
  * KKSU.Studio &copy;
  */
-package view.panel;
+package listener;
 
 import java.awt.Color;
 import java.awt.event.FocusEvent;
@@ -16,7 +16,7 @@ import javax.swing.JTextField;
  * Project: OcpStoreProject.view.panel<br>
  * Time: 2019.2.15, AM 12:58:11<br><br>
  * 
- * {@link view.panel.PromptTextField PromptTextField}
+ * {@link listener.PromptTextField PromptTextField}
  * 
  * <p>Setting the prompt text function in JTextField.
  * 

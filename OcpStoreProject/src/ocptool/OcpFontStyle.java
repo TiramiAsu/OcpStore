@@ -1,7 +1,7 @@
 /*
  * KKSU.Studio &copy;
  */
-package view.panel;
+package ocptool;
 import java.awt.Font;
 
 /**

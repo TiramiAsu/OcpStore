@@ -3,6 +3,10 @@
  */
 package view.panel;
 
+import listener.PromptTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
 /**
  * Project: OcpStoreProject.view.panel<br>
  * Time: 2019.2.15, AM 1:47:08<br><br>
@@ -16,6 +20,10 @@ public class EmployeesLoginPanel extends LoginPanel {
 	 * Create the panel.
 	 */
 	public EmployeesLoginPanel() {
+		btnLogin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		
 		// System message
 		lblSystemMessage.setText("Employees  ");
