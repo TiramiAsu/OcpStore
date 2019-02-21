@@ -6,6 +6,7 @@ package view.panel;
 import javax.swing.SwingConstants;
 
 import ocptool.ISetEnture;
+import view.panel.model.SuperPanel;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -20,7 +21,7 @@ import java.awt.event.ActionEvent;
  * @version Java 1.8
  * @version MySQL WorkBench 8.0.13<br><br>
  */
-public class ManagePanel extends SuperPanel implements ISetEnture{
+public class ManagerManagePanel extends SuperPanel implements ISetEnture{
 	private JButton btn1;
 	private JButton btn2;
 	private JButton btn3;
@@ -34,7 +35,7 @@ public class ManagePanel extends SuperPanel implements ISetEnture{
 	/**
 	 * Create the panel.
 	 */
-	public ManagePanel() {
+	public ManagerManagePanel() {
 		setLayout(null);
 		
 		
@@ -56,7 +57,7 @@ public class ManagePanel extends SuperPanel implements ISetEnture{
 			}
 		});
 		btn1.setBounds(33, 140, 169, 35);
-		btn1.setFont(F.fTextP12());
+		btn1.setFont(F.setIt("bold",16));
 		btn1.setHorizontalAlignment(SwingConstants.LEFT);
 		add(btn1);
 		

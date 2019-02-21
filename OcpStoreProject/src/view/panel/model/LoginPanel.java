@@ -1,7 +1,7 @@
 /*
  * KKSU.Studio &copy;
  */
-package view.panel;
+package view.panel.model;
 import javax.swing.UIManager;
 import javax.swing.JButton;
 import javax.swing.JTextField;

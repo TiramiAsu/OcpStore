@@ -4,6 +4,7 @@
 package view.panel;
 
 import listener.PromptTextField;
+import view.panel.model.LoginPanel;
 
 /**
  * Project: OcpStoreProject.view.panel<br>

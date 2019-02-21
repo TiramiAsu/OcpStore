@@ -1,7 +1,7 @@
 /*
  * KKSU.Studio &copy;
  */
-package view.panel;
+package view.panel.model;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -21,7 +21,7 @@ import java.awt.Color;
 public class SuperPanel extends JPanel {
 	public JLabel lblVersion;
 	public JLabel lblSystemMessage;
-	public OcpFontStyle F = new OcpFontStyle();
+	public OcpFontStyle F = OcpFontStyle.getIt();
 
 	/**
 	 * Create the panel.

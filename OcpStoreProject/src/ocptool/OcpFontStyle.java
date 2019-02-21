@@ -13,6 +13,13 @@ import java.awt.Font;
  */
 public class OcpFontStyle {
 	
+	private OcpFontStyle() {
+	}
+	
+	public static OcpFontStyle getIt() {
+		return new OcpFontStyle();
+	}
+	
 	// For System Message
 	public Font fSystemI12() {
 		return new Font("微軟正黑體", Font.ITALIC, 12);

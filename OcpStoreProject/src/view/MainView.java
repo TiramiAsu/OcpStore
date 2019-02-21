@@ -14,7 +14,7 @@ import ocptool.ISetEnture;
 import ocptool.OcpFontStyle;
 import view.panel.CustomersLoginPanel;
 import view.panel.EmployeesLoginPanel;
-import view.panel.ManagePanel;
+import view.panel.ManagerManagePanel;
 
 import java.awt.Color;
 import javax.swing.JButton;
@@ -34,7 +34,7 @@ public class MainView extends JFrame implements ISetEnture{
 	
 	private EmployeesLoginPanel panelE;
 	private CustomersLoginPanel panelC;
-	private ManagePanel panelM;
+	private ManagerManagePanel panelM;
 	
 	private JButton btnLoginDefault;
 	private JButton btnEmployeesLogin;
@@ -42,7 +42,7 @@ public class MainView extends JFrame implements ISetEnture{
 	private JButton btnMealDefualt;
 	private JButton btnManageDefault;
 	
-	private OcpFontStyle F = new OcpFontStyle();
+	private OcpFontStyle F = OcpFontStyle.getIt();
 
 	/**
 	 * Launch the application.
@@ -81,7 +81,7 @@ public class MainView extends JFrame implements ISetEnture{
 			}
 		});
 		btnLoginDefault.setBounds(177, 10, 146, 23);
-		btnLoginDefault.setFont(F.fTextP10());
+		btnLoginDefault.setFont(F.setIt("bold",12));
 		contentPane.add(btnLoginDefault);
 		
 		btnEmployeesLogin = new JButton("EmployeesLogin");
@@ -128,6 +128,10 @@ public class MainView extends JFrame implements ISetEnture{
 		
 	// Login Panel
 		panelE = new EmployeesLoginPanel();
+		panelE.btnLogin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		panelE.setBounds(177, 111, 770, 400);
 		contentPane.add(panelE);
 		
@@ -137,7 +141,7 @@ public class MainView extends JFrame implements ISetEnture{
 		panelC.setVisible(false);
 		
 	// Manager Panel
-		panelM = new ManagePanel();
+		panelM = new ManagerManagePanel();
 		panelM.setBounds(177, 111, 770, 400);
 		contentPane.add(panelM);
 		panelM.setVisible(false);
@@ -156,7 +160,7 @@ public class MainView extends JFrame implements ISetEnture{
 			boolpanelE = true;
 		}else if(showPanel instanceof CustomersLoginPanel) {
 			boolpanelC = true;
-		}else if(showPanel instanceof ManagePanel) {
+		}else if(showPanel instanceof ManagerManagePanel) {
 			boolpanelM = true;
 		}
 		

@@ -4,6 +4,8 @@
 package view.panel;
 
 import listener.PromptTextField;
+import view.panel.model.LoginPanel;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
