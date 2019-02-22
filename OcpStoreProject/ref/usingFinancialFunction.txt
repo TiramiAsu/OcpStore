@@ -1,0 +1,5 @@
+Using this FinancialFunction:
+
+1. Change "FinancialFunction.txt" of Deputy file name to ".rar".
+2. And unzip the "FinancialFunction.rar" under the package \ref.
+3. Finish.
