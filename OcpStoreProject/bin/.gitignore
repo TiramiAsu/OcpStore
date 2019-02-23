@@ -1,3 +1,10 @@
+/lib/
+/_ModelTest/
+/_TestNote/
+/dao/
+/listener/
+/ocpstoreException/
+/ocptool/
 /view/
 /vo/
-/ocptool/
+/imgs/

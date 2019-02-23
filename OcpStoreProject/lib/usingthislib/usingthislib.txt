@@ -1,5 +1,0 @@
-Using this project library:
-
-1. Change "thislib.txt" of Deputy file name to ".rar".
-2. And unzip the "thislib.rar" under the package \lib.
-3. Finish.
