@@ -8,6 +8,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JList;
 import javax.swing.JPanel;
+import javax.swing.UIDefaults;
+import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 
 import ocptool.ISetEnture;
@@ -15,6 +17,7 @@ import ocptool.OcpFontStyle;
 import view.panel.CustomersLoginPanel;
 import view.panel.EmployeesLoginPanel;
 import view.panel.ManagerManagePanel;
+import view.panel.MealPanel;
 
 import java.awt.Color;
 import javax.swing.JButton;
@@ -35,6 +38,7 @@ public class MainView extends JFrame implements ISetEnture{
 	private EmployeesLoginPanel panelE;
 	private CustomersLoginPanel panelC;
 	private ManagerManagePanel panelM;
+	private MealPanel panelMP;
 	
 	private JButton btnLoginDefault;
 	private JButton btnEmployeesLogin;
@@ -65,7 +69,7 @@ public class MainView extends JFrame implements ISetEnture{
 	 */
 	public MainView() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 999, 583);
+		setBounds(100, 100, 1000, 585);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(0, 139, 139));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -120,6 +124,8 @@ public class MainView extends JFrame implements ISetEnture{
 		btnMealDefualt = new JButton("MealDefualt");
 		btnMealDefualt.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				getSelectButton(btnMealDefualt);
+				getVisiablePanel(panelMP);
 			}
 		});
 		btnMealDefualt.setBounds(350, 10, 146, 23);
@@ -146,6 +152,12 @@ public class MainView extends JFrame implements ISetEnture{
 		contentPane.add(panelM);
 		panelM.setVisible(false);
 		
+	// Meal Panel
+		panelMP = new MealPanel();
+		panelMP.setBounds(177, 111, 770, 400);
+		contentPane.add(panelMP);
+		panelM.setVisible(false);
+		panelMP.getScrollPane().setVisible(false);
 		
 	}
 	
@@ -155,6 +167,7 @@ public class MainView extends JFrame implements ISetEnture{
 		boolean boolpanelE = false;
 		boolean boolpanelC = false;
 		boolean boolpanelM = false;
+		boolean boolpanelMP = false;
 		
 		if(showPanel instanceof EmployeesLoginPanel) {
 			boolpanelE = true;
@@ -162,11 +175,18 @@ public class MainView extends JFrame implements ISetEnture{
 			boolpanelC = true;
 		}else if(showPanel instanceof ManagerManagePanel) {
 			boolpanelM = true;
+		}else if(showPanel instanceof MealPanel) {
+			boolpanelMP = true;
 		}
 		
 		panelE.setVisible(boolpanelE);
 		panelC.setVisible(boolpanelC);
 		panelM.setVisible(boolpanelM);
+		panelMP.setVisible(boolpanelMP);
+		if(boolpanelMP == true) {
+			panelMP.getScrollPane().setVisible(true);
+			panelMP.getScrollPane().getVerticalScrollBar().setUnitIncrement(25);
+		}
 	}
 	
 	@Override

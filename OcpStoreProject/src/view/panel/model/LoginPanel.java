@@ -3,6 +3,9 @@
  */
 package view.panel.model;
 import javax.swing.UIManager;
+
+import view.panel.MealPanel;
+
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
@@ -21,7 +24,7 @@ public class LoginPanel extends SuperPanel {
 	public JTextField txtAccount;
 	public JTextField txtPassword;
 	public JButton btnLogin;
-
+	
 	/**
 	 * Create the panel.
 	 */
@@ -51,7 +54,7 @@ public class LoginPanel extends SuperPanel {
 		add(btnLogin);
 		
 		JLabel lblLogo = new JLabel("");
-		lblLogo.setIcon(new ImageIcon("D:\\GitHub\\OcpStore\\OcpStoreProject\\imgs\\OcpStore_LogoRight.png"));
+		lblLogo.setIcon(new ImageIcon(MealPanel.class.getResource("/imgs/OcpStore_LogoRight.png")));
 		lblLogo.setBounds(44, 48, 341, 290);
 		add(lblLogo);
 

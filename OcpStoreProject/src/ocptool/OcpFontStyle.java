@@ -13,7 +13,7 @@ import java.awt.Font;
  */
 public class OcpFontStyle {
 	
-	private OcpFontStyle() {
+	public OcpFontStyle() {
 	}
 	
 	public static OcpFontStyle getIt() {
@@ -28,6 +28,11 @@ public class OcpFontStyle {
 	// For Title: Plain 20
 	public Font fTitleP20() {
 		return new Font("微軟正黑體", Font.PLAIN, 20);
+	}
+	
+	// For Text: Plain 18
+	public Font fTextP18() {
+		return new Font("微軟正黑體", Font.PLAIN, 18);
 	}
 	
 	// Default Style for this Project
